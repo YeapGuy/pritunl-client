@@ -52,6 +52,22 @@ const css = {
 	input: {
 		width: "100%",
 	} as React.CSSProperties,
+	orBox: {
+		display: "flex",
+		alignItems: "center",
+		margin: "2px 0 15px 0",
+		width: "100%",
+		maxWidth: "280px",
+	} as React.CSSProperties,
+	orLine: {
+		flex: 1,
+		borderTop: "1px solid var(--bp5-divider-black)",
+	} as React.CSSProperties,
+	orText: {
+		padding: "0 8px",
+		fontSize: "11px",
+		color: "var(--bp5-text-color-muted)",
+	} as React.CSSProperties,
 	select: {
 		marginTop: "5px",
 		width: "100%",
@@ -326,6 +342,11 @@ export default class ProfileImport extends React.Component<Props, State> {
 								})
 							}}
 						/>
+						<div style={css.orBox}>
+							<div style={css.orLine}/>
+							<span style={css.orText}>OR</span>
+							<div style={css.orLine}/>
+						</div>
 						<PageInputFile
 							disabled={this.state.disabled}
 							label="Import Profile"
